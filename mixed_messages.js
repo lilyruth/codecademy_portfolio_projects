@@ -6,9 +6,6 @@
 
 // Part 3: Action
 
-
-console.log("This program is in progress!");
-
 const affirmations = { 
     greeting: ["Happy Day", "Greetings", "Hello", "Hi there"],
     name: ["King or Queen", "Friend", "Star", "Wonderful Human", "Fabulous Person"],
@@ -17,5 +14,17 @@ const affirmations = {
 }
 
 function affirmationMachine() {
- 
+ let randomGreetIndex = Math.floor(Math.random() * affirmations["greeting"].length);
+ let randomGreet = affirmations.greeting[randomGreetIndex];
+
+ let nameIndex = Math.floor(Math.random() * affirmations["name"].length);
+ let randomName = affirmations.name[nameIndex];
+
+ let actionIndex = Math.floor(Math.random() * affirmations["action"].length);
+ let randomAction = affirmations.action[actionIndex];
+
+ console.log(`${randomGreet}, ${randomName}! ${randomAction}`);
+
 }
+
+affirmationMachine();
